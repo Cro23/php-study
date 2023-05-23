@@ -9,4 +9,14 @@
 
   echo 'sum：',$sum;
   echo 'greeting：',$greeting;
+
+
+// 2つの変数で1つの値を共有する -- リファレンス渡し
+// $b = &$a
+  $greeting1 = 'Hello';
+  $greeting2 = &$greeting1;
+  $greeting1 = 'World';
+
+  echo 'greeting1：',$greeting1;
+  echo 'greeting2：',$greeting2;
 ?>
