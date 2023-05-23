@@ -45,3 +45,18 @@ define('SMTP_HOST', 'example.com');
 <p>消費税率は：<?php echo TAX_PERCENT;?></p>
 <p>100円NO税込金額は<?php echo 100 + 100*TAX_PERCENT;?></p>
 <p>SMTPサーバーは<?php echo SMTP_HOST;?></p>
+
+<?php
+// PHPにより値が設定される定数 -- マジック定数
+// 改行を表すPHP_EOLのような、PHPにあらかじめ定義された定数の中には、
+// 参照された場所によって異なる値を返す定数もある。
+// マジック定数
+
+  function someFunction() {
+    echo '現在の関数名は：',__FUNCTION__,'です。<br>';
+  }
+  echo '現在のファイル名は：',__FILE__,'です。<br>';
+  echo '現在の行番号は：',__LINE__,'です。<br>';
+  echo '現在のディレクトリは：',__DIR__,'です。<br>';
+  someFunction();
+?>
