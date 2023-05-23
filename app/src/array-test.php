@@ -25,3 +25,23 @@ $chairs = [
 $chairs[] = ['た', 'ち', 'つ', 'て', 'と'];
 echo count($chairs);
 ?>
+
+<?php
+// 特別な意味を持つ値に名前をつける -- 定数
+// define('定数名',値);
+// echo 定数名
+// 変数と違いドル記号は不要
+// 後から上書きできない
+
+define('TAX', 0.08);
+$price = 100 *  TAX;
+echo $price;
+
+// 以下は、「消費税」と「外部サーバーのホスト名」を定数として定義し、出力する例です。
+define('TAX_PERCENT', 0.08);
+define('SMTP_HOST', 'example.com');
+?>
+
+<p>消費税率は：<?php echo TAX_PERCENT;?></p>
+<p>100円NO税込金額は<?php echo 100 + 100*TAX_PERCENT;?></p>
+<p>SMTPサーバーは<?php echo SMTP_HOST;?></p>
