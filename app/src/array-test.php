@@ -23,8 +23,5 @@ $chairs = [
 ];
 
 $chairs[] = ['た', 'ち', 'つ', 'て', 'と'];
-
+echo count($chairs);
 ?>
-
-<p><pre><?php print_r($chairs)?></pre></p>
-<p><pre><?php print_r(count($chairs))?></pre></p>
