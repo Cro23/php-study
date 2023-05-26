@@ -1,4 +1,5 @@
 <?php
+// fizzbuzz関数
   function fizzbuzz($num) {
 
       if ($num % 15 == 0) {
