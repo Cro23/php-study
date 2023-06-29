@@ -47,10 +47,22 @@
 
 declare(strict_types=1);
 
-function doSomething(int $num, string $message): bool
+function add(int $a, int $b, ?string &$errorMessage): int
 {
-  return true;
+  // 以下のコメントアウトを外すとエラーになります。
+  // return 'abc';
+
+  if ($a <= 0 || $b <= 0) {
+    $errorMessage = '（※エラー：正の整数を指定してください。）';
+  }
+
+  $total = $a + $b;
+  return $total;
+
 }
 
-$ret = doSomething(true, 'ARG2'); //ここでエラーとなり、プログラム処理が終了する
-$ret = doSomething('3', 'ARG2'); //実行されない
+$a = -1;
+$b = 10;
+$errorMessage = null;
+echo add($a, $b, $errorMessage);
+echo $errorMessage;
