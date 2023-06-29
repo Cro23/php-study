@@ -2,7 +2,7 @@
 // fizzbuzz関数
   function fizzbuzz($num) {
 
-      if ($num % 15 == 0) {
+      if ($num % 3 == 0 && $num % 5 == 0) {
         return 'FizzBuzz';
       } elseif ($num % 5 == 0) {
         return 'Buzz';
