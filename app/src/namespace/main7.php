@@ -3,8 +3,10 @@
   <?php
   require_once dirname(__FILE__) . '/office/word/Writer.php';
   require_once dirname(__FILE__) . '/office/excel/Writer.php';
-  use Office\Word\Writer as WordWriter;
-  use Office\Excel\Writer as ExcelWriter;
+  use Office\ {
+    Word\Writer as WordWriter,
+    Excel\Writer as ExcelWriter
+  };
 
   $writer = new WordWriter(); // WordのWriterクラスを使う
   $writer->write();
